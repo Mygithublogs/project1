@@ -1,0 +1,78 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ПрофиСПб1</title>
+
+    <!-- Bootstrap-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+
+</head>
+<body>
+
+    <div class="general-container">
+
+      <div class="bs-example" data-example-id="inverted-navbar">
+          <nav class="navbar navbar-inverse btn-orange"><div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar">1</span>
+                  <span class="icon-bar">2</span>
+                  <span class="icon-bar">3</span>
+                </button>
+                <a class="navbar-brand" href="#">ПрофиСПб1</a>
+              </div>
+
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
+                <ul class="nav navbar-nav"><li class="btn-orange2"><a href="#">Домой</a></li>
+                  <li class="btn-orange2"><a href="#">Контакты</a></li>
+                  <li class="btn-orange2"><a href="/admin">О нас</a></li>
+                </ul></div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+          </nav></div><!-- /example -->
+
+
+
+        <div class="container top-container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h1 class="title">Новый сайт магазин ПРОФИ скоро откроется!<br>
+                    Оставляйте Ваш имейл в форме ниже</h1>
+                    <div>
+                        <form action="" method="post" class="form-inline text-center">{% csrf_token %}
+                         <div class="form-group">
+                             <label>Ваш имейл: </label>
+                             <input name="{{ form.email.name }}" class="form-control">
+                         </div>
+                         <div class="form-group">
+                             <label>Ваше имя: </label>
+                             <input name="{{ form.name.name }}" class="form-control">
+                         </div>
+                         <button type="submit" class="btn btn-primary btn-orange">Отправить</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
