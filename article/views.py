@@ -17,4 +17,4 @@ def article(request):
 
         new_form = form.save()
 
-    return render(request, 'landing/landing.html', locals())
+    return render(request, 'landing/test.html', locals())

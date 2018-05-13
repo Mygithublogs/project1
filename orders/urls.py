@@ -18,6 +18,5 @@ from django.contrib import admin
 from article import views
 
 urlpatterns = [
-    url(r'^$', views.article, name='article'),
-    # url(r'^$', views.article, name='article'),
+     url('123/', views.article, name='article'),
 ]
